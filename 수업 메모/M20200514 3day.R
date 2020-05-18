@@ -236,7 +236,6 @@ gender.factor
 # matrix() : matrix 생성함수
 # nrow = 4 가 인수인 것
 
-
 z <- matrix(1:20, nrow =4)
 z
 class(z)
@@ -248,14 +247,15 @@ dim(z)
 # 이것이 default. 걍 기본동작.
 # array 배열, class, 타입확인
 # str 기억장소 확인
-# dim 차원. 몇행 몇열인지 가르쳐줘.
+# dim 차원. 몇행 몇열인지 가르쳐줘. 매트릭스에서는 dim을 쓰도록 한다다
 #
 # 지금 다루고 있는 변수는 다른 것이다. 즉 매트릭스에서의 변수. 콜론, 열
 # 행은 관측치, 값 observation 또는 data인 것이다.
 
-z <- matrix(1:20, nrow = 4, ncol =5, byrow= T)
+z <- matrix(1:20, nrow = 4, ncol =5, byrow= T)        #byrow 그러니까 row 행에서 우측으로 주욱 , 순으로 쓴다는 것
 z
 z <- matrix(1:20, nrow =4, ncol =5)
+z
 
 
 x <- 1:4
@@ -268,6 +268,8 @@ m2 <- rbind(x, y)
 m2
 
 
+# 백터에서 매트릭스 만드는 또하나의 방법
+
 # c = column, r = row
 # rbind는 x,y를 row 즉 행으로 본 거고
 # cbind는 x,y를 column 즉 열 본 거고
@@ -275,7 +277,7 @@ m2
 
 m3 <- rbind(m2, x)
 m3
-m4 <- cbind(z, x)
+m4 <- cbind(m2, x)
 m4
 
 
